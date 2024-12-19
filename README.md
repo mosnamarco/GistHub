@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GistHub - The Summarizer Webapp
 
-## Getting Started
+Welcome to **GistHub**, a webapp that summarizes your content with the power of AI! 🚀✨
 
-First, run the development server:
+## Requirements
+
+Before we dive into the magic, make sure you have the following:
+- **Backend (API)**: [GistHub_API](https://github.com/mosnamarco/GistHub_API.git)
+- **Frontend (Client)**: This repository, GistHub
+
+## Tech Stack
+- **Frontend**: Built with **Next.js** and styled with **Material-UI** for that sleek, modern look.
+- **Backend**: Powered by **Flask** (because who doesn't love Python?) to handle all your API needs.
+- **Summarization Model**: We're using **Facebook's BART Large CNN** model (via Hugging Face) for the summarization magic.
+
+## Running the App
+
+To run GistHub, you'll need both the **frontend (client)** and **backend (API)** running. But hey, if you're feeling adventurous, you can totally run just one part—frontend or backend. **Whatever floats your boat** 🚤.
+
+### 1. **Clone both the frontend and backend**:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the API repository
+git clone https://github.com/mosnamarco/GistHub_API.git
+
+# Clone this repository (client)
+git clone https://github.com/yourusername/GistHub.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. **Start the Backend (API)**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Make sure you have Python installed (we're all about that Python love 💖).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Navigate to the backend folder
+cd GistHub_API
 
-## Learn More
+# Install dependencies
+pip install -r requirements.txt
 
-To learn more about Next.js, take a look at the following resources:
+# Run the Flask app (Backend)
+python app.py
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. **Start the Frontend (Client)**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Make sure Node.js is installed (because JavaScript lives here too, folks).
 
-## Deploy on Vercel
+```bash
+# Navigate to the frontend folder
+cd GistHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Install dependencies
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run the Next.js app (Frontend)
+npm run dev
+```
+
+### 4. **Start Summarizing!**
+
+Once both the frontend and backend are running, head over to `http://localhost:3000`, and start pasting text to get it summarized. Or, just fire up one part of the stack and see what happens.
+
+## Notes:
+
+- You **must** run both parts together to get the full experience, but hey, you can experiment with the client or backend independently. **Do your thing!**
+- Want to dive into the code? Check out the frontend or backend sections. There's plenty of room for exploration and contributions. 🤓
+
+## Contributing
+
+If you want to contribute, feel free to fork the repo, make some changes, and submit a pull request! Contributions are always welcome (but remember, no unsolicited "improvements" like adding a pop-up with memes).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
